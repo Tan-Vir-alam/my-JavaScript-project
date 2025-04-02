@@ -3,22 +3,18 @@ const calculateBtn = document.getElementById("calculate-btn");
 const result = document.getElementById("result");
 const resetBtn = document.getElementById("reset-btn");
 
-
-
 calculateBtn.addEventListener("click", function () {
     if (isEmptyInput()) {
         alert("Input is Empty.");
         return;
     }
-
     const score = parseFloat(scoreInput.value);
 
     if (isInvalidMarks(score)) {
         alert("Please type your marks: ");
         return;
     }
-
-    const grade = calculateGrade(score);
+  const grade = calculateGrade(score);
 
    
     //result.innerText = Your grade is: ${grade};
@@ -30,12 +26,10 @@ calculateBtn.addEventListener("click", function () {
 function isEmptyInput() {
     return !scoreInput.value.trim();
 }
-
 function isInvalidMarks(marks) {
     if (isNaN(marks) || marks < 0 || marks > 100) 
         return "Invalid Marks"; 
 }
-
 function calculateGrade(marks) {
     if (marks >= 80 && marks <= 100) {
         return "A+";
