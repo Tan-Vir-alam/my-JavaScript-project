@@ -21,6 +21,5 @@ function decreaseCount() {
   count--;
   counterElement.innerText = count;
 }
-
 increaseButton.addEventListener("click", increaseCount);
 decreaseButton.addEventListener("click", decreaseCount);
